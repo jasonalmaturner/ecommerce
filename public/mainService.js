@@ -4,7 +4,7 @@ app.service('mainService', function($http){
 this.getProducts = function(){
   return $http({
     method: 'GET',
-    url: 'http://localhost:9999/api/products'
+    url: '/api/products'
   })
 }
 
@@ -12,7 +12,7 @@ this.postProduct = function(product){
   console.log('service')
   return $http({
     method: 'POST',
-    url: 'http://localhost:9999/api/products',
+    url: '/api/products',
     data: product
   });
 };
@@ -20,7 +20,7 @@ this.postProduct = function(product){
 this.updateProduct = function(product){
   return $http({
     method: 'PUT',
-    url: 'http://localhost:9999/api/products',
+    url: '/api/products',
     data: product
   })
 }

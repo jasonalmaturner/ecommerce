@@ -1,8 +1,6 @@
 var app = angular.module('ecommerce');
 app.controller('mainCtrl', function($scope, mainService){
 
-
-
 $scope.getProducts = function(){
   mainService.getProducts().then(function(res){
     $scope.products = res.data;
@@ -14,7 +12,6 @@ $scope.getProducts = function(){
 $scope.getProducts();
 
 $scope.addProduct = function(){
-  console.log('here')
   mainService.postProduct($scope.newProduct).then(function(res){
     $scope.getProducts();
   })
